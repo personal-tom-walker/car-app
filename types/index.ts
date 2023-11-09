@@ -6,3 +6,7 @@ export interface CustomButtonProps {
   containerStyles?: string;
   handleClick?: MouseEventHandler<HTMLButtonElement>;
 }
+
+export interface CustomFilterProps {
+  title: string;
+}
