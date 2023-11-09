@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { heroConstants } from './constants';
 
 const Hero = () => {
-    const { title, subtitle, buttonText } = heroConstants;
-    const handleScroll = () => {};
+  const { title, subtitle, buttonText } = heroConstants;
+  const handleScroll = () => {};
   return (
     <div className='hero'>
       <div className='flex-1 pt-36 padding-x'>
@@ -17,11 +17,13 @@ const Hero = () => {
           containerStyles='bg-primary-blue text-white rounded-full mt-10'
           handleClick={handleScroll}
         />
-          </div>
-          <div className="hero__image-container">
-              <div className="hero__image">
-              </div>
-          </div>
+      </div>
+      <div className='hero__image-container'>
+        <div className='hero__image'>
+          <Image src='/hero.png' alt='SUV hero' fill className='object-contain' />
+          <div className="hero__image-overlay" />
+        </div>
+      </div>
     </div>
   );
 };
