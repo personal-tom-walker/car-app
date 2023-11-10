@@ -20,16 +20,16 @@ export const fetchCars = async () => {
 };
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
-    const baseRentalPricePerDaySterling = 50;
-    const additionalPricePerMile = 0.1;
-    const additionalPricePerVehicleYearAge = 0.05;
+  const baseRentalPricePerDaySterling = 50;
+  const additionalPricePerMile = 0.1;
+  const additionalPricePerVehicleYearAge = 0.05;
 
-    const mileageRate = city_mpg * additionalPricePerMile;
-    const ageRate =
-      (new Date().getFullYear() - year) * additionalPricePerVehicleYearAge;
+  const mileageRate = city_mpg * additionalPricePerMile;
+  const ageRate =
+    (new Date().getFullYear() - year) * additionalPricePerVehicleYearAge;
 
-    const rentalRatePerDay =
-      baseRentalPricePerDaySterling + mileageRate + ageRate;
+  const rentalRatePerDay =
+    baseRentalPricePerDaySterling + mileageRate + ageRate;
 
-    return rentalRatePerDay.toFixed(0);
-}
+  return rentalRatePerDay.toFixed(0);
+};

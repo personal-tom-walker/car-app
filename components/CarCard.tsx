@@ -30,10 +30,10 @@ const CarCard = ({ car }: CarCardProps) => {
         {carRent}
         <span className='self-end text-[14px] font-semibold'>/day</span>
       </p>
-      <div className='relative w-full h-40 my-3 object-contain'>
+      <div className='relative w-full h-40 my-3 obFject-contain'>
         <Image
-          src='/hero.png'
-          alt={`${make} ${model} car`}
+          src='/car-shadow-crop.png'
+          alt='car'
           fill
           priority
           className='object-contain'
@@ -77,7 +77,11 @@ const CarCard = ({ car }: CarCardProps) => {
           />
         </div>
       </div>
-          <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
+      <CarDetails
+        isOpen={isOpen}
+        closeModal={() => setIsOpen(false)}
+        car={car}
+      />
     </div>
   );
 };
