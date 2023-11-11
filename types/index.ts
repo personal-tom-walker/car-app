@@ -47,3 +47,8 @@ export interface filterProps {
   model: string;
 }
 
+export interface ShowMoreProps {
+  pageNumber: number;
+  isNext: boolean;
+}
+
