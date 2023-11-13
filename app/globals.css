@@ -127,8 +127,12 @@
   @apply text-[14px] leading-[17px];
 }
 
-.car-card__btn-container {
+.car-card__btn-container-desktop {
   @apply hidden group-hover:flex absolute bottom-0 w-full z-10;
+}
+
+.car-card__btn-container-mobile {
+  @apply xl:hidden relative w-full mt-2;
 }
 /* END: Car Card styles */
 
@@ -152,7 +156,7 @@
 }
 
 .custom-filter__options {
-  @apply absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
+  @apply absolute mt-1 w-[127px] max-h-60 overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm;
 }
 /* END: Custom Filter styles */
 
