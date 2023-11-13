@@ -1,9 +1,9 @@
 import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from '@/components';
 import { fuels, yearsOfProduction } from '@/constants';
+import { HomeProps } from '@/types';
 import { fetchCars } from '@/utils';
-import Image from 'next/image';
 
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams } : HomeProps) {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || '',
     model: searchParams.model || '',
@@ -11,6 +11,7 @@ export default async function Home({ searchParams }) {
     limit: searchParams.limit || 10,
     fuel: searchParams.fuel || '',
   });
+  console.log('allCars', allCars);
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
   return (
     <main className='overflow-hidden'>
@@ -30,8 +31,8 @@ export default async function Home({ searchParams }) {
         {!isDataEmpty ? (
           <section>
             <div className='home__cars-wrapper'>
-              {allCars?.map((carData) => (
-                <CarCard key={carData.model} car={carData} />
+              {allCars?.map((carData, index) => (
+                <CarCard key={`${carData.model}${index}`} car={carData} />
               ))}
             </div>
             <ShowMore

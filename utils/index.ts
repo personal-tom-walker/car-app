@@ -1,8 +1,8 @@
 const axios = require('axios');
 
-import { filterProps } from '@/types';
+import { FilterProps } from '@/types';
 
-export const fetchCars = async (filters: filterProps) => {
+export const fetchCars = async (filters: FilterProps) => {
   const { manufacturer, model, year, limit, fuel } = filters;
   const options = {
     method: 'GET',
