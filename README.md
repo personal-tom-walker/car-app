@@ -1,6 +1,6 @@
 # Car App
 
-A Next.js example App to learn TypeScript and reinforce server-side-rendering SEO principles
+A Next.js example App to learn TypeScript and reinforce server-side-rendering approach
 
 The project will use Trunk-Based Development (main branch only); ensure commits are as granular as you can.
 
