@@ -1,6 +1,6 @@
 # Car App
 
-Depolyed on: https://car-app-amber.vercel.app/
+Deployed on: https://car-app-amber.vercel.app/
 
 A Next.js example App to learn TypeScript and reinforce server-side-rendering approach.
 
